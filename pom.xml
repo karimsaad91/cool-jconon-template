@@ -25,9 +25,9 @@
         <version>4.10.2</version>
     </parent>
 
-    <artifactId>cool-jconon-template</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>Concorsi On-Line Template</name>
+    <artifactId>cool-jconon-asp</artifactId>
+    <version>0.0.1</version>
+    <name>Concorsi On-Line Asp Bassa Romagna</name>
 
     <properties>
         <cool.mode>development</cool.mode>
