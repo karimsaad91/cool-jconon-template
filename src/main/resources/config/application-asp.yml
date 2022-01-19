@@ -1,3 +1,4 @@
+# https://github.com/consiglionazionaledellericerche/cool-jconon/blob/master/cool-jconon-backend/src/main/resources/config/application.yaml
 user:
   admin:
     password: password
