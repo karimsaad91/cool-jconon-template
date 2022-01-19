@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:spid="https://spid.gov.it/saml-extensions" ID="ID_6ae80aed-3247-4647-bf5f-6f5294cbc2c7" entityID="https://www.aspbassaromagna.it"><ds:Signature>
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+<ds:Reference URI="#ID_6ae80aed-3247-4647-bf5f-6f5294cbc2c7">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>eeeusIN21aYHHsrr1xtV4YJqwr6E+gOBwfyywrwjAxU=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+Xx1Il1HmpDiDoEglCjwk2tPv6gu6ktnoYfyCpUWkbtKDRTMooIsMuTQuPPAt7CrnnTz24hXSjxMA
+WtPKuvwXrngyNPT3trw2W3PejYwyUfc6vQsLCIWlaDIOzs903DMKDV3nMf3DNG5KmJJBO7ZlBFiD
+qUDWZ84/G3zYQGUD4ngCIPfNmLHBVEXu18O8QM4Jbg7SJuln1sN48iNvT6YxLh4p7AHWPwPyCKRM
+hQxojfSEovfrNOMV2i+Mduomr/twlyKZX97yrlZHZ/W/+uU1eEwwwa1oysqMHuXQ5GKD4nlA+KHy
+AgRi4dXsum74PhJ7eCvdebU8glRWooHoWLPgKw==
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
++46NspDzErBIJtkoOlhY9qr55X4yoHfeiktWTUAzh+5TYO2evsvqkPv6QZYlsR8E9k1uYkgrhCPt
+8vY+X+gRTD217I0I7951wW9jN46Fnx6qV8O+gUeAwtVCpowdvDqmHYag8XUrqZb3psVCSqqkwR7b
+cqvnL+BqdCGgzSETq3a9dLyycuYEDlqB8114PV/Z/QBByxOqQHrfqS75qM9jgfQiVrlXPDh7oEnb
+bvskk2zd4z/79O88B5WNNgQW6eYJMoAXruhM6KiToXvwyDwyRgt6EyHRvR+Kmf7CPft7TIgUXkqf
+kyYzgIxY6DOOJeHu158Q0k+yCB5or5N8sRaHiQ==
+</ds:Modulus>
+<ds:Exponent>AQAB</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIFuTCCBKGgAwIBAgIUcbKKbGsMlQiTgK/3J9rNWyro/ucwDQYJKoZIhvcNAQELBQAwgbsxKzAp
+BgNVBAoMIkFTUCBkZWkgQ29tdW5pIGRlbGxhIEJhc3NhIFJvbWFnbmExKTAnBgNVBAMMIGh0dHBz
+Oi8vYmFuZGkuYXNwYmFzc2Fyb21hZ25hLml0MScwJQYDVQRTDB5odHRwczovL3d3dy5hc3BiYXNz
+YXJvbWFnbmEuaXQxFDASBgNVBGEMC1BBOklULWFkY2JyMQswCQYDVQQGEwJJVDEVMBMGA1UEBwwM
+QmFnbmFjYXZhbGxvMB4XDTIxMTIyMjE1MTYzNVoXDTMxMTIyMDE1MTYzNVowgbsxKzApBgNVBAoM
+IkFTUCBkZWkgQ29tdW5pIGRlbGxhIEJhc3NhIFJvbWFnbmExKTAnBgNVBAMMIGh0dHBzOi8vYmFu
+ZGkuYXNwYmFzc2Fyb21hZ25hLml0MScwJQYDVQRTDB5odHRwczovL3d3dy5hc3BiYXNzYXJvbWFn
+bmEuaXQxFDASBgNVBGEMC1BBOklULWFkY2JyMQswCQYDVQQGEwJJVDEVMBMGA1UEBwwMQmFnbmFj
+YXZhbGxvMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA+46NspDzErBIJtkoOlhY9qr5
+5X4yoHfeiktWTUAzh+5TYO2evsvqkPv6QZYlsR8E9k1uYkgrhCPt8vY+X+gRTD217I0I7951wW9j
+N46Fnx6qV8O+gUeAwtVCpowdvDqmHYag8XUrqZb3psVCSqqkwR7bcqvnL+BqdCGgzSETq3a9dLyy
+cuYEDlqB8114PV/Z/QBByxOqQHrfqS75qM9jgfQiVrlXPDh7oEnbbvskk2zd4z/79O88B5WNNgQW
+6eYJMoAXruhM6KiToXvwyDwyRgt6EyHRvR+Kmf7CPft7TIgUXkqfkyYzgIxY6DOOJeHu158Q0k+y
+CB5or5N8sRaHiQIDAQABo4IBsTCCAa0wCQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCBsAwcwYDVR0g
+BGwwajAfBgMrTBAwGDAWBggrBgEFBQcCAjAKDAhBZ0lEcm9vdDAgBgQrTBAGMBgwFgYIKwYBBQUH
+AgIwCgwIYWdJRGNlcnQwJQYGK0wQBAIBMBswGQYIKwYBBQUHAgIwDQwLY2VydF9TUF9QdWIwHQYD
+VR0OBBYEFNTJthW55bXX7Cf3hiM9US/BMMsCMIH7BgNVHSMEgfMwgfCAFNTJthW55bXX7Cf3hiM9
+US/BMMsCoYHBpIG+MIG7MSswKQYDVQQKDCJBU1AgZGVpIENvbXVuaSBkZWxsYSBCYXNzYSBSb21h
+Z25hMSkwJwYDVQQDDCBodHRwczovL2JhbmRpLmFzcGJhc3Nhcm9tYWduYS5pdDEnMCUGA1UEUwwe
+aHR0cHM6Ly93d3cuYXNwYmFzc2Fyb21hZ25hLml0MRQwEgYDVQRhDAtQQTpJVC1hZGNicjELMAkG
+A1UEBhMCSVQxFTATBgNVBAcMDEJhZ25hY2F2YWxsb4IUcbKKbGsMlQiTgK/3J9rNWyro/ucwDQYJ
+KoZIhvcNAQELBQADggEBAFHBt+MG23U5kpB+/Bklh8EX62WctnJ4uo8sVtwTSgUx9TssYQIPTwpF
+IaW9eR2VHe5nrhAADQlz5yZra9rSM9BEc5zQGh532VPJcUPubco0in7mis1VIxv1zFT9aXW47B4v
+h7egme35rYVXA215wY9pfXxF7HvYayoVVKvKWvxWpSG8O1KOQ6epMfPty7jqlqNYrIEY/sQqIbh4
+aIBm7hAi2GJ3WQH3jE0Blr8SFkQEjijTR8cRHOxp4Drt+TQVozz4AE7g3jH7ghy+4m983MOQK08z
+VYo16OagqtrEQEt+HQuidQvs7MVpIZ46XN1aTH50Xw2/xISAQSc32CGu+WI=
+</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+</ds:Signature>
+	<md:SPSSODescriptor AuthnRequestsSigned="true" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:KeyDescriptor use="signing">
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>
+MIIFuTCCBKGgAwIBAgIUcbKKbGsMlQiTgK/3J9rNWyro/ucwDQYJKoZIhvcNAQEL
+BQAwgbsxKzApBgNVBAoMIkFTUCBkZWkgQ29tdW5pIGRlbGxhIEJhc3NhIFJvbWFn
+bmExKTAnBgNVBAMMIGh0dHBzOi8vYmFuZGkuYXNwYmFzc2Fyb21hZ25hLml0MScw
+JQYDVQRTDB5odHRwczovL3d3dy5hc3BiYXNzYXJvbWFnbmEuaXQxFDASBgNVBGEM
+C1BBOklULWFkY2JyMQswCQYDVQQGEwJJVDEVMBMGA1UEBwwMQmFnbmFjYXZhbGxv
+MB4XDTIxMTIyMjE1MTYzNVoXDTMxMTIyMDE1MTYzNVowgbsxKzApBgNVBAoMIkFT
+UCBkZWkgQ29tdW5pIGRlbGxhIEJhc3NhIFJvbWFnbmExKTAnBgNVBAMMIGh0dHBz
+Oi8vYmFuZGkuYXNwYmFzc2Fyb21hZ25hLml0MScwJQYDVQRTDB5odHRwczovL3d3
+dy5hc3BiYXNzYXJvbWFnbmEuaXQxFDASBgNVBGEMC1BBOklULWFkY2JyMQswCQYD
+VQQGEwJJVDEVMBMGA1UEBwwMQmFnbmFjYXZhbGxvMIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEA+46NspDzErBIJtkoOlhY9qr55X4yoHfeiktWTUAzh+5T
+YO2evsvqkPv6QZYlsR8E9k1uYkgrhCPt8vY+X+gRTD217I0I7951wW9jN46Fnx6q
+V8O+gUeAwtVCpowdvDqmHYag8XUrqZb3psVCSqqkwR7bcqvnL+BqdCGgzSETq3a9
+dLyycuYEDlqB8114PV/Z/QBByxOqQHrfqS75qM9jgfQiVrlXPDh7oEnbbvskk2zd
+4z/79O88B5WNNgQW6eYJMoAXruhM6KiToXvwyDwyRgt6EyHRvR+Kmf7CPft7TIgU
+XkqfkyYzgIxY6DOOJeHu158Q0k+yCB5or5N8sRaHiQIDAQABo4IBsTCCAa0wCQYD
+VR0TBAIwADAOBgNVHQ8BAf8EBAMCBsAwcwYDVR0gBGwwajAfBgMrTBAwGDAWBggr
+BgEFBQcCAjAKDAhBZ0lEcm9vdDAgBgQrTBAGMBgwFgYIKwYBBQUHAgIwCgwIYWdJ
+RGNlcnQwJQYGK0wQBAIBMBswGQYIKwYBBQUHAgIwDQwLY2VydF9TUF9QdWIwHQYD
+VR0OBBYEFNTJthW55bXX7Cf3hiM9US/BMMsCMIH7BgNVHSMEgfMwgfCAFNTJthW5
+5bXX7Cf3hiM9US/BMMsCoYHBpIG+MIG7MSswKQYDVQQKDCJBU1AgZGVpIENvbXVu
+aSBkZWxsYSBCYXNzYSBSb21hZ25hMSkwJwYDVQQDDCBodHRwczovL2JhbmRpLmFz
+cGJhc3Nhcm9tYWduYS5pdDEnMCUGA1UEUwweaHR0cHM6Ly93d3cuYXNwYmFzc2Fy
+b21hZ25hLml0MRQwEgYDVQRhDAtQQTpJVC1hZGNicjELMAkGA1UEBhMCSVQxFTAT
+BgNVBAcMDEJhZ25hY2F2YWxsb4IUcbKKbGsMlQiTgK/3J9rNWyro/ucwDQYJKoZI
+hvcNAQELBQADggEBAFHBt+MG23U5kpB+/Bklh8EX62WctnJ4uo8sVtwTSgUx9Tss
+YQIPTwpFIaW9eR2VHe5nrhAADQlz5yZra9rSM9BEc5zQGh532VPJcUPubco0in7m
+is1VIxv1zFT9aXW47B4vh7egme35rYVXA215wY9pfXxF7HvYayoVVKvKWvxWpSG8
+O1KOQ6epMfPty7jqlqNYrIEY/sQqIbh4aIBm7hAi2GJ3WQH3jE0Blr8SFkQEjijT
+R8cRHOxp4Drt+TQVozz4AE7g3jH7ghy+4m983MOQK08zVYo16OagqtrEQEt+HQui
+dQvs7MVpIZ46XN1aTH50Xw2/xISAQSc32CGu+WI=</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</md:KeyDescriptor>		
+		<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://bandi.aspbassaromagna.it/rest/security/logout"/>
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+		<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://bandi.aspbassaromagna.it/spid/send-response" index="0" isDefault="true"/>
+		<md:AttributeConsumingService index="0">
+			<md:ServiceName xml:lang="it">Single sign-on</md:ServiceName>
+			<md:RequestedAttribute FriendlyName="Email" Name="email" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+			<md:RequestedAttribute FriendlyName="Data di nascita" Name="dateOfBirth" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+			<md:RequestedAttribute FriendlyName="Nome" Name="name" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+			<md:RequestedAttribute FriendlyName="Cognome" Name="familyName" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+			<md:RequestedAttribute FriendlyName="Sesso" Name="gender" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+			<md:RequestedAttribute FriendlyName="Codice fiscale" Name="fiscalNumber" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+		</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+		<md:OrganizationName xml:lang="it">ASP dei Comuni della Bassa Romagna</md:OrganizationName>
+		<md:OrganizationName xml:lang="en">ASP dei Comuni della Bassa Romagna</md:OrganizationName>
+		<md:OrganizationDisplayName xml:lang="it">ASP dei Comuni della Bassa Romagna</md:OrganizationDisplayName>
+		<md:OrganizationDisplayName xml:lang="en">ASP dei Comuni della Bassa Romagna</md:OrganizationDisplayName>
+		<md:OrganizationURL xml:lang="it">https://www.aspbassaromagna.it</md:OrganizationURL>
+		<md:OrganizationURL xml:lang="en">https://www.aspbassaromagna.it</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="other">
+		<md:Extensions>
+			<spid:IPACode>adcbr</spid:IPACode>
+			<spid:Public/>
+		</md:Extensions>
+		<md:Company>ASP dei Comuni della Bassa Romagna</md:Company>
+		<md:EmailAddress>staffdirezione@aspbassaromagna.it</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
