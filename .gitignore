@@ -4,4 +4,4 @@
 /logs/
 /docker-compose/pgdata/
 /docker-compose/alf_data/
-/src/main/resources/config/passwords.yml
+/src/main/resources/idp.yml

@@ -1,4 +1,6 @@
-!include passwords.yml
+user:
+  admin:
+    password: password
 oil:
   url: http://10.12.12.20:9081/rest
 server:
@@ -34,3 +36,30 @@ multipart:
     default:
       upload:
         size: 5242880
+mail:
+  host: smtp.aspbassaromagna.it
+  port: 25
+  username: user
+  password: password
+  smtp:
+    host: ${mail.host}
+    user: ${mail.username}
+    password: ${mail.password}
+    auth: true
+    starttls:
+      enable: false
+  encoding: UTF-8
+  from:
+    default: bandi@aspbassaromagna.it
+  admin: staffdirezione@aspbassaromagna.it
+  to:
+    error:
+      message: staffdirezione@aspbassaromagna.it
+  helpdesk: staffdirezione@aspbassaromagna.it
+  error:
+    enabled: true
+  create:
+    user:
+      bcc:
+        enabled: true
+
