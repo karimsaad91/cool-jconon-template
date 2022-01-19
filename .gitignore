@@ -5,3 +5,4 @@
 /docker-compose/pgdata/
 /docker-compose/alf_data/
 /src/main/resources/idp.yml
+/src/main/resources/keystore/cert.pkcs12
