@@ -1,0 +1,36 @@
+!include passwords.yml
+oil:
+  url: http://10.12.12.20:9081/rest
+server:
+  servlet:
+    context-path: /
+repository:
+  base:
+    url: http://10.12.12.20:9080/alfresco/
+spid:
+  enable: true  
+  issuer:
+    entity_id: https://www.aspbassaromagna.it
+  destination: https://bandi.aspbassaromagna.it/spid/send-response
+siper:
+  static:
+    sedi: true
+rrd:
+  path: remote-shared,remote-single-model
+ipa:
+  url:
+    base: https://www.indicepa.gov.it/public-services/opendata-read-service.php
+    amministrazioni: ${ipa.url.base}?dstype=FS&filename=amministrazioni.txt
+attiva:
+  mail:
+    solleciti: false
+  protocol:
+    application: true
+multipart:
+  resolver:
+    max:
+      upload:
+        size: 10485760
+    default:
+      upload:
+        size: 5242880
