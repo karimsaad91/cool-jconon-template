@@ -17,18 +17,48 @@
 
 package it.cnr.si.cool.jconon.asp.service;
 
+import it.cnr.cool.cmis.service.CMISService;
+import it.cnr.cool.exception.CoolUserFactoryException;
+import it.cnr.cool.mail.MailService;
+import it.cnr.cool.mail.model.AttachmentBean;
+import it.cnr.cool.mail.model.EmailMessage;
+import it.cnr.cool.rest.util.Util;
+import it.cnr.cool.security.service.UserService;
+import it.cnr.cool.security.service.impl.alfresco.CMISUser;
+import it.cnr.cool.service.I18nService;
+import it.cnr.cool.web.scripts.exception.ClientMessageException;
+import it.cnr.si.cool.jconon.cmis.model.JCONONPropertyIds;
 import it.cnr.si.cool.jconon.service.PrintService;
-import org.springframework.beans.factory.annotation.Value;
+import org.apache.chemistry.opencmis.client.api.Folder;
+import org.apache.chemistry.opencmis.client.api.Session;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.util.*;
 
 @Primary
 @Service
 public class ASPPrintService extends PrintService {
-  @Override
-  public void printApplication(String nodeRef, final String contextURL, final Locale locale, final boolean email) {
+    private static final Logger LOGGER = LoggerFactory.getLogger(ASPPrintService.class);
+    @Autowired
+    private CMISService cmisService;
+    @Autowired
+    private UserService userService;
+    @Autowired
+    private I18nService i18nService;
+    @Autowired
+    private MailService mailService;
+    @Autowired
+    private ApplicationContext context;
+
+    @Override
+    public void printApplication(String nodeRef, final String contextURL, final Locale locale, final boolean email) {
         try {
             LOGGER.info("Start print application width id: " + nodeRef);
             Session cmisSession = cmisService.createAdminSession();
@@ -65,6 +95,7 @@ public class ASPPrintService extends PrintService {
                 message.setRecipients(emailList);
                 String body;
                 if (confirmed) {
+                    message.setCcRecipients(Arrays.asList("staffdirezione@aspbassaromagna.it"));
                     body = Util.processTemplate(mailModel, "/pages/application/application.registration.html.ftl");
                     message.setSubject(i18nService.getLabel("subject-info", locale) + i18nService.getLabel("subject-confirm-domanda", locale, call.getProperty(JCONONPropertyIds.CALL_CODICE.value()).getValueAsString()));
                     Map<String, Object> properties = new HashMap<String, Object>();
@@ -77,7 +108,6 @@ public class ASPPrintService extends PrintService {
                 }
                 message.setBody(body);
                 message.setAttachments(Arrays.asList(new AttachmentBean(nameRicevutaReportModel, stampaByte)));
-		message.setCcRecipients(Arrays.asList("staffdirezione@aspbassaromagna.it"));
                 mailService.send(message);
             }
             if (LOGGER.isInfoEnabled())
