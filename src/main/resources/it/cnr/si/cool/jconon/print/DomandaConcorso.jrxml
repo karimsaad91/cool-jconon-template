@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.18.1.final utlizzo versione della libreria JasperReports6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<!--
+  ~ Copyright (C) 2021  Consiglio Nazionale delle Ricerche
+  ~
+  ~      This program is free software: you can redistribute it and/or modify
+  ~      it under the terms of the GNU Affero General Public License as
+  ~      published by the Free Software Foundation, either version 3 of the
+  ~      License, or (at your option) any later version.
+  ~
+  ~      This program is distributed in the hope that it will be useful,
+  ~      but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~      GNU Affero General Public License for more details.
+  ~
+  ~      You should have received a copy of the GNU Affero General Public License
+  ~      along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+<!-- Created with Jaspersoft Studio version 6.15.0.final utlizzo versione della libreria JasperReports6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DomandaConcorso" pageWidth="595" pageHeight="842" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="28" bottomMargin="28" scriptletClass="net.sf.jasperreports.engine.JRDefaultScriptlet" uuid="6fccba99-1156-4661-99e5-3238586360bb">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
@@ -34,7 +50,7 @@
 	<parameter name="MD5" class="java.lang.String" isForPrompting="false"/>
 	<parameter name="QRCODE" class="java.io.InputStream" isForPrompting="false"/>
 	<parameter name="DIR_IMAGE" class="java.lang.String" isForPrompting="false">
-		<defaultValueExpression><![CDATA["/home/mspasiano/git/cool-jconon/cool-jconon-print/src/main/resources/it/cnr/si/cool/jconon/print/"]]></defaultValueExpression>
+		<defaultValueExpression><![CDATA["/home/mspasiano/git/cool-jconon-agid/src/main/resources/it/cnr/si/cool/jconon/print/"]]></defaultValueExpression>
 	</parameter>
 	<parameter name="dichiarazioni" class="java.lang.String" isForPrompting="false"/>
 	<parameter name="allegati" class="java.lang.String" isForPrompting="false"/>
@@ -235,6 +251,9 @@
 	<field name="cmis:objectId" class="java.lang.String">
 		<fieldDescription><![CDATA[cmis:objectId]]></fieldDescription>
 	</field>
+	<field name="jconon_application:objectId" class="java.lang.String">
+		<fieldDescription><![CDATA[jconon_application:objectId]]></fieldDescription>
+	</field>
 	<field name="jconon_call:descrizione_ridotta" class="java.lang.String">
 		<fieldDescription><![CDATA[jconon_call:descrizione_ridotta]]></fieldDescription>
 	</field>
@@ -279,8 +298,11 @@
 	</background>
 	<title>
 		<band height="82">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<image scaleImage="FillFrame">
-				<reportElement x="0" y="0" width="515" height="80" uuid="10816825-524b-476c-b8d3-4e082faecce4"/>
+				<reportElement x="0" y="0" width="515" height="80" uuid="10816825-524b-476c-b8d3-4e082faecce4">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
 				<imageExpression><![CDATA[$P{DIR_IMAGE}+"logo-print.png"]]></imageExpression>
 			</image>
 		</band>
@@ -292,7 +314,7 @@
 				<textElement textAlignment="Right" verticalAlignment="Top">
 					<font isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[TEXT( $F{jasperReport:user_matricola})]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{jconon_call:codice}]]></textFieldExpression>
 			</textField>
 			<line>
 				<reportElement x="0" y="17" width="514" height="1" uuid="ddffa55c-e06c-4fbe-a876-86da7f96ed61"/>
@@ -1051,6 +1073,20 @@ new java.util.Date():new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Simp
 				<textElement textAlignment="Right"/>
 				<textFieldExpression><![CDATA[($F{jconon_application:data_domanda} == null || $F{jconon_application:data_domanda}.isEmpty())?
 new java.util.Date():new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").parse($F{jconon_application:data_domanda}))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="textField-3" style="FONT_Normal" mode="Transparent" x="2" y="38" width="68" height="15" uuid="1e9e5712-e4c6-453c-93f2-455092752696">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Top" markup="none">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Domanda: ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="70" y="38" width="275" height="15" uuid="6307352c-ebe2-4801-b127-e93ff1091e89"/>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{jconon_application:objectId}]]></textFieldExpression>
 			</textField>
 		</band>
 	</lastPageFooter>
