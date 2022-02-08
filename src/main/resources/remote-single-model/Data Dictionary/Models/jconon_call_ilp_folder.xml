@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model xmlns="http://www.alfresco.org/model/dictionary/1.0" name="jconon_call_ilp:jconon_call_ilpModel">
+    <description>JCONON Nuovo Ente Model</description>
+    <version>1.0</version>
+	<imports>
+		<import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d" />
+		<import uri="http://www.alfresco.org/model/content/1.0" prefix="cm" />
+		<import uri="http://www.cnr.it/model/jconon_call/cmis" prefix="jconon_call" />
+	</imports>
+    <namespaces>
+        <namespace uri="https://bandi.aspbassaromagna.it/model/jconon_call/ilp/cmis" prefix="jconon_call_ilp"/>
+    </namespaces>
+    <types>
+        <type name="jconon_call_ilp:folder">
+            <title>Incarichi libera professione</title>
+            <description>Inserisci un incarico libera professione</description>
+            <parent>jconon_call:folder</parent>
+        </type>
+    </types>
+</model>
