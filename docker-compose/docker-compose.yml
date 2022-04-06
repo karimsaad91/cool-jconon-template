@@ -35,7 +35,10 @@ services:
   alfresco-search-services:
     image: alfresco/alfresco-search-services:1.2.0
     environment:
-      - '-Xmx1g'
+# per applicare
+# docker-compose rm -f -s -v alfresco-search-services
+# docker-compose up -d alfresco-search-services
+      - '-Xmx4g'
       - SOLR_ALFRESCO_HOST=alfresco-community-erecruitment-acs
       - SOLR_ALFRESCO_PORT=8080
       - SOLR_SOLR_HOST=alfresco-community-erecruitment-acs

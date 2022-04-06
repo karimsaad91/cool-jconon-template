@@ -95,10 +95,10 @@ public class ASPPrintService extends PrintService {
                 message.setRecipients(emailList);
                 String body;
                 if (confirmed) {
-                    message.setBccRecipients(Arrays.asList("staffdirezione@aspbassaromagna.it"));
+                    message.setCcRecipients(Arrays.asList("concorsiaspbassaromagna@pec.it"));
                     body = Util.processTemplate(mailModel, "/pages/application/application.registration.html.ftl");
                     message.setSubject(	i18nService.getLabel("subject-info", locale) + i18nService.getLabel("subject-confirm-domanda", locale, call.getProperty(JCONONPropertyIds.CALL_CODICE.value()).getValueAsString(), application.getProperty("jconon_application:cognome").getValueAsString(), application.getProperty("jconon_application:nome").getValueAsString() ) );
-                    Map<String, Object> properties = new HashMap<String, Object>();
+		    Map<String, Object> properties = new HashMap<String, Object>();
                     properties.put(JCONONPropertyIds.APPLICATION_DUMMY.value(), "{\"stampa_archiviata\" : true}");
                     application.updateProperties(properties);
                 } else {

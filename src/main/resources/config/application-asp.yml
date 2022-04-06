@@ -4,6 +4,8 @@ user:
     password: password
 oil:
   url: http://10.12.12.20:9081/rest
+  username: admin
+  password: password
 server:
   servlet:
     context-path: /
@@ -38,8 +40,8 @@ multipart:
       upload:
         size: 5242880
 mail:
-  host: smtp.aspbassaromagna.it
-  port: 25
+  host: smtps.pec.aruba.it
+  port: 587
   username: user
   password: password
   smtp:
@@ -48,15 +50,15 @@ mail:
     password: ${mail.password}
     auth: true
     starttls:
-      enable: false
+      enable: true
   encoding: UTF-8
   from:
-    default: bandi@aspbassaromagna.it
+    default: concorsiaspbassaromagna@pec.it
   admin: staffdirezione@aspbassaromagna.it
   to:
     error:
-      message: staffdirezione@aspbassaromagna.it
-  helpdesk: staffdirezione@aspbassaromagna.it
+      message: assistenza@electroninformatica.it
+  helpdesk: assistenza@electroninformatica.it
   error:
     enabled: true
   create:
