@@ -164,7 +164,7 @@
                     </security>
                 </datasource>
                 <datasource jta="true" jndi-name="java:/PostgresDS" pool-name="PostgresDS" enabled="true" use-ccm="true">
-                    <connection-url>jdbc:postgresql://pgoil:5432/helpdeskdb</connection-url>
+                    <connection-url>jdbc:postgresql://10.12.12.20:5432/helpdeskdb</connection-url>
                     <driver-class>org.postgresql.Driver</driver-class>
                     <driver>postgres</driver>
                     <new-connection-sql>SET search_path = public, pg_catalog;</new-connection-sql>
@@ -190,7 +190,7 @@
                     </statement>
                 </datasource>
                 <datasource jta="true" jndi-name="java:/PostgresDSHDConcorsi" pool-name="PostgresDSHDConcorsi" enabled="true" use-ccm="true">
-                    <connection-url>jdbc:postgresql://pgoil:5432/helpdeskdb</connection-url>
+                    <connection-url>jdbc:postgresql://10.12.12.20:5432/helpdeskdb</connection-url>
                     <driver-class>org.postgresql.Driver</driver-class>
                     <driver>postgres</driver>
                     <new-connection-sql>SET search_path = public, pg_catalog;</new-connection-sql>

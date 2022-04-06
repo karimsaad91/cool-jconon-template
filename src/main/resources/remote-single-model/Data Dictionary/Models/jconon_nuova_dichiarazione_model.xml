@@ -12,13 +12,13 @@
     </namespaces>
     <aspects>
         <aspect name="jconon_nuova_dichiarazione:aspect_nuova_dichiarazione">
-            <title>Certificazione per il riconoscimento ausili e/o tempi aggiuntivi</title>
+            <title>Nuova dichiarazione</title>
             <parent>jconon_application:aspects</parent>
             <properties>
                 <property name="jconon_nuova_dichiarazione:fl_nuova_dichiarazione">
-                    <title>Certificazione per il riconoscimento ausili e/o tempi aggiuntivi</title>
+                    <title>di aver .........</title>
                     <type>d:boolean</type>
-                    <mandatory>false</mandatory>
+                    <mandatory>true</mandatory>
                 </property>
             </properties>
         </aspect>

@@ -1,8 +1,17 @@
 <div class="container helpdesk-parent" >
   <div class="content">
-    <div class="page-header" style="color:#0693e3;">
-        <h1><p style="text-align:center;">${message('page.helpdesk')}</p></h1>
+    <div class="page-header" style="color:#0080C0;">
+        <h1>${message('page.helpdesk')}</h1>
     </div>
+
+	<!--	
+	<div class="span11" >
+      <div class="callout-box center" id="intestazione">
+        Clicca <a href="https://www.aspbassaromagna.it/contatti/">qui</a> per accedere all'helpdesk
+      </div>
+    </div>
+	-->
+
     <div class="span11" >
       <div class="callout-box center" id="intestazione">
         ${message('label.istruzioni.helpdesk')}
@@ -25,5 +34,6 @@
         </div>
       </div>
     </div>
+
   </div>
 </div>
