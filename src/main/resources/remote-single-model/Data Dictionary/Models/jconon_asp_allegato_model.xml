@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model xmlns="http://www.alfresco.org/model/dictionary/1.0" name="jconon_asp_allegato:jconon_asp_allegatoModel">
+    <description>JCONON ASP Allegato Model</description>
+    <version>1.0</version>
+    <imports>
+        <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
+        <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+        <import uri="http://www.cnr.it/model/jconon_attachment/cmis" prefix="jconon_attachment" />
+    </imports>
+    <namespaces>
+        <namespace uri="http://www.nuovoente.it/model/jconon_asp_allegato/cmis" prefix="jconon_asp_allegato"/>
+    </namespaces>
+    <types>
+        <type name="jconon_asp_allegato:attachment">
+            <title>Certificazione ausili e/o tempi aggiuntivi ASP</title>
+            <description>Nuova Dichiarazione</description>
+            <parent>jconon_attachment:document_mono</parent>
+            <properties>
+                <property name="jconon_asp_allegato:asp_allegato">
+                    <title>Certificazione ausili e/o tempi aggiuntivi</title>
+                    <description>Certificazione ausili e/o tempi aggiuntivi</description>
+                    <type>d:text</type>
+                    <mandatory>false</mandatory>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored>
+                        <tokenised>both</tokenised>
+                    </index>
+                </property>
+            </properties>
+            <mandatory-aspects>
+                <aspect>jconon_attachment:asp_allegato</aspect>
+            </mandatory-aspects>
+        </type>
+    </types>
+</model>
