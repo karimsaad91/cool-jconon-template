@@ -29,7 +29,7 @@
                 </property>
             </properties>
             <mandatory-aspects>
-                <aspect>jconon_attachment:asp_allegato</aspect>
+                <aspect>jconon_attachment:generic_document</aspect>
             </mandatory-aspects>
         </type>
     </types>
