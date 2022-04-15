@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model xmlns="http://www.alfresco.org/model/dictionary/1.0" name="jconon_dichiarazione_incarichi:jconon_dichiarazione_incarichiModel">
+    <description>JCONON ASP Allegato Model</description>
+    <version>1.0</version>
+    <imports>
+        <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
+        <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+        <import uri="http://www.cnr.it/model/jconon_attachment/cmis" prefix="jconon_attachment" />
+    </imports>
+    <namespaces>
+        <namespace uri="http://www.nuovoente.it/model/jconon_dichiarazione_incarichi/cmis" prefix="jconon_dichiarazione_incarichi"/>
+    </namespaces>
+    <types>
+        <type name="jconon_dichiarazione_incarichi:attachment">
+            <title>Dichiarazione incarichi di specifica responsabilità</title>
+            <description>Dichiarazione incarichi di specifica responsabilità</description>
+            <parent>jconon_attachment:document_mono</parent>
+            <mandatory-aspects>
+                <aspect>jconon_attachment:generic_document</aspect>
+            </mandatory-aspects>
+        </type>
+    </types>
+</model>
