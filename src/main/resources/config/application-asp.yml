@@ -65,4 +65,6 @@ mail:
     user:
       bcc:
         enabled: true
-
+io:
+  url: https://api.io.italia.it/api/v1
+  subscriptionkey: chiave_io

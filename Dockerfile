@@ -8,6 +8,11 @@ RUN apk add tzdata
 RUN cp /usr/share/zoneinfo/Europe/Rome /etc/localtime
 RUN echo "Europe/Rome" > /etc/timezone
 
+#Copia script update cert. io
+COPY ./api-italia-cron.sh /opt/api-italia-cron.sh
+RUN apk add openssl
+RUN sh /opt/api-italia-cron.sh
+
 RUN adduser -D -s /bin/sh jconon
 WORKDIR /home/jconon
 USER jconon
