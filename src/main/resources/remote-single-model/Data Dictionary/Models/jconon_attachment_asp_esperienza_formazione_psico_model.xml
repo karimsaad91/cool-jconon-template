@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model xmlns="http://www.alfresco.org/model/dictionary/1.0" name="jconon_esperienza_formazione_psico:jconon_esperienza_formazione_psicoModel">
+    <description>JCONON ASP Allegato Model</description>
+    <version>1.0</version>
+    <imports>
+        <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
+        <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+        <import uri="http://www.cnr.it/model/jconon_attachment/cmis" prefix="jconon_attachment" />
+    </imports>
+    <namespaces>
+        <namespace uri="http://www.nuovoente.it/model/jconon_esperienza_formazione_psico/cmis" prefix="jconon_esperienza_formazione_psico"/>
+    </namespaces>
+    <types>
+        <type name="jconon_esperienza_formazione_psico:attachment">
+            <title>Esperienza e formazione valutabile</title>
+            <description>Dichiarazione esperienza e formazione valutabile</description>
+            <parent>jconon_attachment:document_mono</parent>
+            <mandatory-aspects>
+                <aspect>jconon_attachment:generic_document</aspect>
+            </mandatory-aspects>
+        </type>
+    </types>
+</model>

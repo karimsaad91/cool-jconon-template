@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model xmlns="http://www.alfresco.org/model/dictionary/1.0" name="jconon_esperienza_valutabile:jconon_esperienza_valutabileModel">
+    <description>JCONON ASP Allegato Model</description>
+    <version>1.0</version>
+    <imports>
+        <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d"/>
+        <import uri="http://www.alfresco.org/model/content/1.0" prefix="cm"/>
+        <import uri="http://www.cnr.it/model/jconon_attachment/cmis" prefix="jconon_attachment" />
+    </imports>
+    <namespaces>
+        <namespace uri="http://www.nuovoente.it/model/jconon_esperienza_valutabile/cmis" prefix="jconon_esperienza_valutabile"/>
+    </namespaces>
+    <types>
+        <type name="jconon_esperienza_valutabile:attachment">
+            <title>Esperienza valutabile</title>
+            <description>Esperienza valutabile</description>
+            <parent>jconon_attachment:document_mono</parent>
+            <mandatory-aspects>
+                <aspect>jconon_attachment:generic_document</aspect>
+            </mandatory-aspects>
+        </type>
+    </types>
+</model>
