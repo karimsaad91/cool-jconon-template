@@ -1,0 +1,28 @@
+#https://www.keycloak.org/docs/latest/securing_apps/
+#https://github.com/consiglionazionaledellericerche/cool-jconon/tree/master/cool-jconon-keycloak
+keycloak:
+    enabled: true
+    realm: bandi
+    auth-server-url: https://sso.aspbassaromagna.it/
+    ssl-required: none
+    resource: selezioni
+    public-client: true
+    use-resource-role-mappings: true
+    confidential-port: 0
+    credentials:
+        secret: secret
+sso:
+    asp:
+        user: is_asp_user
+        matricola: matricola_asp
+        livello: livello
+        contesto: selezioni-app
+        username_asp: username_asp
+        logout_success_url: https://bandi.aspbassaromagna.it
+
+spring:
+    main:
+        # TODO - Workaround for circular dependency of KeycloakWebSecurityConfigurerAdapter https://github.com/keycloak/keycloak/issues/8857
+        allow-circular-references: true
+    session:
+        hazelcast:

@@ -10,8 +10,10 @@ RUN echo "Europe/Rome" > /etc/timezone
 
 #Copia script update cert. io
 COPY ./api-italia-cron.sh /opt/api-italia-cron.sh
+COPY ./ssl-keycloak-cron.sh /opt/ssl-keycloak-cron.sh
 RUN apk add openssl
 RUN sh /opt/api-italia-cron.sh
+RUN sh /opt/ssl-keycloak-cron.sh
 
 RUN adduser -D -s /bin/sh jconon
 WORKDIR /home/jconon
