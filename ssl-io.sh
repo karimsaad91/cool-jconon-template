@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/sh
+
 echo -n | openssl s_client -connect api.io.italia.it:443 -servername api.io.italia.it | openssl x509 > /opt/api.io.italia.it.crt
 
 /opt/jdk/bin/keytool -delete 			\

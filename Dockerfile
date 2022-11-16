@@ -8,12 +8,12 @@ RUN apk add tzdata
 RUN cp /usr/share/zoneinfo/Europe/Rome /etc/localtime
 RUN echo "Europe/Rome" > /etc/timezone
 
-#Copia script update cert. io
-COPY ./api-italia-cron.sh /opt/api-italia-cron.sh
-COPY ./ssl-keycloak-cron.sh /opt/ssl-keycloak-cron.sh
+#Certificati SSL per Io e SSO Keycloak
+COPY ./ssl-io.sh /opt/ssl-io.sh
+COPY ./ssl-keycloak.sh /opt/ssl-keycloak.sh
 RUN apk add openssl
-RUN sh /opt/api-italia-cron.sh
-RUN sh /opt/ssl-keycloak-cron.sh
+RUN sh /opt/ssl-io.sh
+RUN sh /opt/ssl-keycloak.sh
 
 RUN adduser -D -s /bin/sh jconon
 WORKDIR /home/jconon

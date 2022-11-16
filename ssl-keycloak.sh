@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/sh
+
 echo -n | openssl s_client -connect sso.aspbassaromagna.it:443 -servername sso.aspbassaromagna.it | openssl x509 > /opt/sso.aspbassaromagna.it.crt
 
 /opt/jdk/bin/keytool -delete 			\

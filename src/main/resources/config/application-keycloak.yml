@@ -6,18 +6,18 @@ keycloak:
     auth-server-url: https://sso.aspbassaromagna.it/
     ssl-required: none
     resource: selezioni
-    public-client: true
+    public-client: false
     use-resource-role-mappings: true
     confidential-port: 0
     credentials:
         secret: secret
 sso:
-    asp:
-        user: is_asp_user
-        matricola: matricola_asp
+    cnr:
+        user: is_cnr_user
+        matricola: matricola_cnr
         livello: livello
         contesto: selezioni-app
-        username_asp: username_asp
+        username_cnr: username_cnr
         logout_success_url: https://bandi.aspbassaromagna.it
 
 spring:
