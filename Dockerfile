@@ -11,10 +11,12 @@ RUN echo "Europe/Rome" > /etc/timezone
 #Certificati SSL per Io e SSO Keycloak
 COPY ./ssl-io.sh /opt/ssl-io.sh
 COPY ./ssl-keycloak.sh /opt/ssl-keycloak.sh
+COPY ./ssl-cron.sh /opt/ssl-cron.sh
 RUN apk add openssl
-RUN sh /opt/ssl-io.sh
-RUN sh /opt/ssl-keycloak.sh
-
+RUN chmod +x /opt/ssl-cron.sh
+RUN chmod +x /opt/ssl-io.sh
+RUN chmod +x /opt/ssl-keycloak.sh
+RUN /opt/ssl-keycloak.sh
 RUN adduser -D -s /bin/sh jconon
 WORKDIR /home/jconon
 USER jconon

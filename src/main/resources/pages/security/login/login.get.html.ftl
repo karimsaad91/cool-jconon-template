@@ -49,7 +49,7 @@
                     </a>
                 </#if>
                 <#if (spidEnable!false)>
-                     <!-- AGID - SPID IDP BUTTON SMALL "ENTRA CON SPID" * begin * -->
+                     <!-- AGID - SPID IDP BUTTON SMALL "ENTRA CON SPID" * begin * 
                     <a href="#" class="btn btn-primary italia-it-button italia-it-button-size-m button-spid span12" spid-idp-button="#spid-idp-button-small-get" aria-haspopup="true" aria-expanded="false">
                         <span class="italia-it-button-icon"><img src="res/img/spid-ico-circle-bb.svg" onerror="this.src='res/img/spid-ico-circle-bb.png'; this.onerror=null;" alt="" /></span>
                         <span class="italia-it-button-text">${message('spid.sign.in')}</span>
@@ -62,7 +62,7 @@
                                 </li>
                             </#list>
                         </ul>
-                    </div>
+                    </div> -->
                 </#if>
                 <#if !((spidEnable!false) || (activeProfiles?? && activeProfiles?seq_contains("keycloak")))>
                     <button class="btn btn-primary span12" type="submit"><i class="icon-user animated flash"></i> ${message('sign.in')}</button>
